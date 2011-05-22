@@ -1,0 +1,18 @@
+A simple real-time web chat built in Opa.
+
+BUILDING
+ make
+
+LAUNCHING
+On one server:
+ ./opa_chat.exe
+(launches on port 8080)
+
+or
+ ./opa_chat.exe --server-port nnnn
+
+On many servers:
+  opa-cloud opa-chat.exe --host localhost --host me@my_second_server --host me@my_third_server
+
+Users connecting to the launch server will be load-balanced among servers. Users
+connecting to one server can chat transparently with users connecting to other servers.
